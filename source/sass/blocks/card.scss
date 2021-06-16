@@ -1,0 +1,24 @@
+.card {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: $grey;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+}
+
+.card__text {
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+
+.cars__description {
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 19px;
+}

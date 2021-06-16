@@ -1,0 +1,23 @@
+.form__label {
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.form__input {
+  margin-left: 10px;
+  font: inherit;
+  border: 1px solid $light-grey;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 8px 8px 8px 8px;
+}
+
+@media (min-width: $width-tablet) {
+  .form__input {
+    min-width: 418px;
+    margin-left: 15px;
+    padding-bottom: 14px;
+    padding-top: 14px;
+  }
+}

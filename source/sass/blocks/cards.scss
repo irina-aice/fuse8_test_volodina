@@ -1,0 +1,91 @@
+.cards {
+  max-width: 1180px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: $width-tablet) {
+  .cards {
+    padding-top: 46px;
+  }
+}
+
+.cards__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: $width-tablet) {
+  .cards__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -11px;
+    margin-right: -11px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .cards__list {
+    margin-left: -11px;
+    margin-right: -11px;
+  }
+}
+
+.cards__item {
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+
+@media (min-width: $width-tablet) {
+  .cards__item {
+    width: 50%;
+    padding-bottom: 38px;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .cards__item {
+    width: 33.3%;
+  }
+}
+
+.cards__inner {
+  position: relative;
+}
+
+.cards__image {
+  width: 100%;
+  object-fit: cover;
+  max-height: 227px;
+}
+
+.cards__type {
+  position: absolute;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $white;
+
+  &--independent {
+    background-color: $dark-green;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &--support {
+    background-color: $orange;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+

@@ -1,0 +1,25 @@
+.button {
+  position: relative;
+  display: inline-block;
+  min-width: 151px;
+  padding: 12px 45px 12px 33px;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: -0.3px;
+  border: 1px solid $light-grey;
+  border-radius: 25px;
+  box-sizing: border-box;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 17px;
+    top: 17px;
+    right: 30px;
+    background-image: url("../img/chevron.svg");
+    background-repeat: no-repeat;
+  }
+}

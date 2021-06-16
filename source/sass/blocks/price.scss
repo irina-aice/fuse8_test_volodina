@@ -1,0 +1,9 @@
+.price {
+  margin: 0;
+}
+
+.price__information {
+  &--number {
+    font-weight: 700;
+  }
+}
