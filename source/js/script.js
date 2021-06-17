@@ -37,15 +37,15 @@
       cardElement.querySelector('.price__information--number').textContent = card.price;
       cardElement.querySelector('.card__text').textContent = card.address;
 
-      cardElement.querySelector('.cards__image').src = photoUrl;
+      cardElement.querySelector('.card__image').src = photoUrl;
 
-      cardElement.querySelector('.cards__item').setAttribute('data-id', card.id);
-      cardElement.querySelector('.cards__link').setAttribute('href', `/details/${card.id}`);
+      cardElement.querySelector('.card').setAttribute('data-id', card.id);
+      cardElement.querySelector('.card__link').setAttribute('href', `/details/${card.id}`);
 
       if (card.type === TYPE_SUPPORT) {
-        cardElement.querySelector('.cards__type--support').classList.remove('hidden');
+        cardElement.querySelector('.card__type--support').classList.remove('hidden');
       } else if (card.type === TYPE_INDEPENDENT) {
-        cardElement.querySelector('.cards__type--independent').classList.remove('hidden');
+        cardElement.querySelector('.card__type--independent').classList.remove('hidden');
       }
 
       cardList.appendChild(cardElement);
@@ -60,7 +60,7 @@
     for (let i = 0; i < data.length; i++) {
       let card = data[i];
 
-      let cardElement = document.querySelector(`.cards__item[data-id="${card.id}"]`);
+      let cardElement = document.querySelector(`.card[data-id="${card.id}"]`);
 
       if (card.title.toLowerCase().includes(searchValue.toLowerCase())) {
         cardElement.classList.remove('hidden');
@@ -76,7 +76,7 @@
   let searchField = document.querySelector('.form__input');
   searchField.addEventListener('input', () => {
     if (searchField.value.length === 0) {
-      document.querySelectorAll('.cards__item').forEach((cardElement) => {
+      document.querySelectorAll('.card').forEach((cardElement) => {
         cardElement.classList.remove('hidden');
       });
     }

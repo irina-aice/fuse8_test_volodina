@@ -1,4 +1,42 @@
-.card {
+.card__link {
+  color: inherit;
+}
+.card__image-wrapper {
+  position: relative;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+  max-height: 227px;
+}
+
+.card__type {
+  position: absolute;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $white;
+
+  &--independent {
+    background-color: $dark-green;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &--support {
+    background-color: $orange;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.card__information {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -17,7 +55,7 @@
   margin-bottom: 15px;
 }
 
-.cars__description {
+.card__description {
   margin-top: 7px;
   font-size: 14px;
   line-height: 19px;
