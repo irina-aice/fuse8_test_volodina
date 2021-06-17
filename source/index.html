@@ -16,115 +16,33 @@
       <input class="form__input" type="search" name="search" id="search-area">
     </form>
     <div class="cards">
-      <ul class="cards__list">
-        <li class="cards__item">
-          <a class="cards__link">
-            <div class="cards__inner">
-              <img class="cards__image" src="img/house-one.jpg">
-              <span class="cards__type cards__type--independent">Independent living</span>
-            </div>
-            <div class="card">
-              <h4 class="card__title">Brunlees Court</h4>
-              <p class="card__text">19-23 Cambridge Road, Southport</p>
-              <p class="price">
-                <span class="price__information">New Properties for Sale from</span>
-                <span class="price__information price__information--number">£214,999</span>
-              </p>
-              <p class="cars__description">Shared Ownership Available</p>
-            </div>
-          </a>
-        </li>
-        <li class="cards__item">
-          <a>
-            <div class="cards__inner">
-              <img class="cards__image" src="img/house-two.jpg">
-              <span class="cards__type cards__type--independent">Independent living</span>
-            </div>
-            <div class="card">
-              <h4 class="card__title">Charlotte Court</h4>
-              <p class="card__text">19-23 Cambridge Road, Southport</p>
-              <p class="price">
-                <span class="price__information">New Properties for Sale from</span>
-                <span class="price__information price__information--number">£214,999</span>
-              </p>
-              <p class="cars__description">Shared Ownership Available</p>
-            </div>
-          </a>
-        </li>
-        <li class="cards__item">
-          <a>
-            <div class="cards__inner">
-              <img class="cards__image" src="img/house-three.jpg">
-              <span class="cards__type cards__type--support">Restaurant & Support available</span>
-            </div>
-            <div class="card">
-              <h4 class="card__title">Grove Court</h4>
-              <p class="card__text">19-23 Cambridge Road, Southport</p>
-              <p class="price">
-                <span class="price__information">New Properties for Sale from</span>
-                <span class="price__information price__information--number">£214,999</span>
-              </p>
-              <p class="cars__description">Shared Ownership Available</p>
-            </div>
-          </a>
-        </li>
-        <li class="cards__item">
-          <a>
-            <div class="cards__inner">
-              <img class="cards__image" src="img/house-four.jpg">
-              <span class="cards__type cards__type--independent">Independent living</span>
-            </div>
-            <div class="card">
-              <h4 class="card__title">Brunlees Court</h4>
-              <p class="card__text">19-23 Cambridge Road, Southport</p>
-              <p class="price">
-                <span class="price__information">New Properties for Sale from</span>
-                <span class="price__information price__information--number">£214,999</span>
-              </p>
-              <p class="cars__description">Shared Ownership Available</p>
-            </div>
-          </a>
-        </li>
-        <li class="cards__item">
-          <a>
-            <div class="cards__inner">
-              <img class="cards__image" src="img/house-five.jpg">
-              <span class="cards__type cards__type--independent">Independent living</span>
-            </div>
-            <div class="card">
-              <h4 class="card__title">Charlotte Court</h4>
-              <p class="card__text">19-23 Cambridge Road, Southport</p>
-              <p class="price">
-                <span class="price__information">New Properties for Sale from</span>
-                <span class="price__information price__information--number">£214,999</span>
-              </p>
-              <p class="cars__description">Shared Ownership Available</p>
-            </div>
-          </a>
-        </li>
-        <li class="cards__item">
-          <a>
-            <div class="cards__inner">
-              <img class="cards__image" src="img/house-six.jpg">
-              <span class="cards__type cards__type--support">Restaurant & Support available</span>
-            </div>
-            <div class="card">
-              <h4 class="card__title">Grove Court</h4>
-              <p class="card__text">19-23 Cambridge Road, Southport</p>
-              <p class="price">
-                <span class="price__information">New Properties for Sale from</span>
-                <span class="price__information price__information--number">£214,999</span>
-              </p>
-              <p class="cars__description">Shared Ownership Available</p>
-            </div>
-          </a>
-        </li>
-      </ul>
+      <ul class="cards__list"></ul>
     </div>
     <div class="main__button">
       <a class="button" href="#">See more</a>
     </div>
   </main>
 
+  <template id="card">
+    <li class="cards__item">
+      <a class="cards__link" href="#">
+        <div class="cards__inner">
+          <img class="cards__image" src="" width="377" height="227">
+          <span class="cards__type cards__type--support hidden">Restaurant & Support available</span>
+          <span class="cards__type cards__type--independent hidden">Independent living</span>
+        </div>
+        <div class="card">
+          <h4 class="card__title"></h4>
+          <p class="card__text"></p>
+          <p class="price">
+            <span class="price__information">New Properties for Sale from</span>
+            <span class="price__information price__information--number"></span>
+          </p>
+          <p class="cars__description">Shared Ownership Available</p>
+        </div>
+      </a>
+    </li>
+  </template>
+  <script src="js/main.min.js"></script>
 </body>
 </html>
