@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Test frontend developer</title>
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <main class="main">
+    <h1 class="main__title">Our Latest Developments</h1>
+    <form class="main__form form">
+      <label class="form__label" for="search-area">Filter</label>
+      <input class="form__input" type="search" name="search" id="search-area">
+    </form>
+    <div class="cards">
+      <ul class="cards__list"></ul>
+    </div>
+    <div class="main__button">
+      <a class="button" href="#">See more</a>
+    </div>
+  </main>
+
+  <template id="card">
+    <li class="cards__item card">
+      <a class="card__link" href="#">
+        <div class="card__image-wrapper">
+          <img class="card__image" src="" width="377" height="227">
+          <span class="card__type card__type--support hidden">Restaurant & Support available</span>
+          <span class="card__type card__type--independent hidden">Independent living</span>
+        </div>
+        <div class="card__information">
+          <h4 class="card__title"></h4>
+          <p class="card__text"></p>
+          <p class="price">
+            <span class="price__information">New Properties for Sale from</span>
+            <span class="price__information price__information--number"></span>
+          </p>
+          <p class="card__description">Shared Ownership Available</p>
+        </div>
+      </a>
+    </li>
+  </template>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
