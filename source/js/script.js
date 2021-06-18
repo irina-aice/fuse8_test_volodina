@@ -3,21 +3,6 @@
 (function () {
   let data = [];
 
-  function fetchData(onFetchSuccess, onFetchError) {
-    fetch(
-      'https://603e38c548171b0017b2ecf7.mockapi.io/homes',
-      {
-        method: 'GET'
-      }
-    ).then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-    }).then((json) => {
-      onFetchSuccess(json);
-    })
-  }
-
   function onFetchSuccess(json) {
     data = json;
 
@@ -30,7 +15,7 @@
     for (let i = 0; i < data.length; i++) {
       const photoUrl = `https://source.unsplash.com/random/377x227?house&${i}`;
 
-      let card = data[i];
+      const card = data[i];
       const cardElement = cardTemplate.cloneNode(true);
 
       cardElement.querySelector('.card__title').textContent = card.title;
@@ -52,15 +37,26 @@
     }
   }
 
-  function onFetchError() {
-    //
+  function fetchData(onSuccess) {
+    fetch(
+      'https://603e38c548171b0017b2ecf7.mockapi.io/homes',
+      {
+        method: 'GET',
+      },
+    ).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((json) => {
+      onSuccess(json);
+    });
   }
 
   function filter(searchValue) {
     for (let i = 0; i < data.length; i++) {
-      let card = data[i];
+      const card = data[i];
 
-      let cardElement = document.querySelector(`.card[data-id="${card.id}"]`);
+      const cardElement = document.querySelector(`.card[data-id="${card.id}"]`);
 
       if (card.title.toLowerCase().includes(searchValue.toLowerCase())) {
         cardElement.classList.remove('hidden');
@@ -71,9 +67,9 @@
 
   }
 
-  fetchData(onFetchSuccess, onFetchError);
+  fetchData(onFetchSuccess);
 
-  let searchField = document.querySelector('.form__input');
+  const searchField = document.querySelector('.form__input');
   searchField.addEventListener('input', () => {
     if (searchField.value.length === 0) {
       document.querySelectorAll('.card').forEach((cardElement) => {
